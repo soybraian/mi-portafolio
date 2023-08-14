@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a{
+  color: #000;
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body{
+  background: #fff;
+  color: #0b141e;
+}
+
+/* NAVBAR */
+.header{
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.logo{
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: orange;
+}
+
+.menu-bar a{
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: 3.5rem;
+  transition: 0.4s ease;
+}
+
+.menu-bar a:hover{
+  color: orange;
+}
+
+#menu-btn{
+  font-size: 3rem;
+  display: none;
+}
+
+/* HOME */
+section{
+  padding: 10rem 10%;
+  min-height: 100vh;
+}
+
+.home{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-bio h2{
+  font-size: 2.5rem;
+}
+
+span{
+  color: orange;
+}
+
+.home-bio h1{
+  font-size: 3.5rem;
+  line-height: 1.4;
+}
+
+
+.home-bio p{
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+
+.profile-pic img{
+  width: 30vw;
+  border-radius: 50%;
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-2.5rem);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+.social-media a{
+  width: 3.8rem;
+  height: 3.8rem;
+  font-size: 2.2rem;
+  margin: 1rem 1rem 2rem 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: 0.4s ease;
+}
+
+.social-media a:hover{
+  color: orange;
+  box-shadow: 0 0 1rem orange;
+}
+
+.btn{
+  display: inline-block;
+  background: orange;
+  margin: 2rem 0;
+  padding: 1rem 2.5rem;
+  border-radius: 1.3rem;
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.5s ease;
+}
+
+.btn:hover{
+  color: orange;
+  background: #fff;
+  box-shadow: 0 0 1rem orange;
+}
+
+/* ABOUT */
+.about{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.heading{
+  font-size: 3.3rem;
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.about-items{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.about-resume h3 {
+  font-size: 2.4rem;
+}
+
+.about-resume a{
+  text-align: center;
+}
+
+.about-text p{
+  font-size: 1.8rem;
+}
+
+/* SKILLS */
+.skills{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.skills-items{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 3rem;
+}
+
+.skill-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.skill-card:hover{
+  border-radius: 1rem solid;
+  transform: scale(1.05);
+}
+
+.skill-card .bx{
+  font-size: 8rem;
+  transition: 0.4s ease;
+}
+
+.skill-card .bx:hover{
+  color: orange;
+}
+
+
+.skill-card h3{
+  font-size: 2.5rem;
+  font-weight: 200;
+}
+
+.skill-card p{
+  text-align: center;
+  font-size: 1.3rem;
+  opacity: 0.5;
+}
+
+/* PROJECTS */
+.projects{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.projects-items{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 3rem;
+}
+
+.projects-card{
+  position: relative;
+  height: 25rem;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.projects-card img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-overlay{
+  background: rgba(0,0,0, 0.8);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: 0.3s all linear;
+}
+
+.card-overlay:hover{
+  background: rgba(0, 0, 0, 0);
+  color: #000;
+  transition: 0.5s all linear;
+}
+
+.card-overlay .bx{
+  color: #fff;
+  font-size: 1.8rem;
+  padding: 1.1rem;
+  background:rgba(0,0,0, 0.8);
+  border-radius: 0.8rem;
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.card-overlay .bx:hover{
+  transform: scale(1.2);
+  color: orange;
+  background: #000;
+  box-shadow: 0 0 2rem orange;
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* CONTACT */
+.contact{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+form{
+  display: grid;
+  row-gap: 1rem;
+  width: 60%;
+}
+
+input::placeholder,
+textarea::placeholder{
+  color: #fff3f1;
+}
+
+form input,
+textarea{
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: white;
+  background: rgba(0,0,0, 0.2);
+  border-radius: 1rem;
+  resize: none;
+}
+
+/* FOOTER */
+.footer{
+  padding: 2rem 10%;
+  text-align: center;
+  font-size: 1rem;
+}
+
+hr{
+  margin: 1rem;
+  border-bottom: thin solid #000;
+}
+
+p{
+  font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px){
+  html{
+    font-size: 60%;
+  }
+}
+
+@media  (max-width: 992px){
+  .header{
+    padding: 2rem 4%;
+  }
+  .home img{
+    width: 40vw;
+  }
+}
+
+@media (max-width: 767px){
+  #menu-btn{
+    display: block;
+  }
+  .menu-bar{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #fff;
+    display: none;
+  }
+  .menu-bar.active{
+    display: block;
+  }
+  .menu-bar a{
+    display: block;
+    margin: 2rem;
+    font-size: 2rem;
+  }
+  .home, .about-items{
+    flex-direction: column;
+  }
+  .home img{
+    width: 80vw;
+  }
+  .heading{
+    font-size: 3rem;
+  }
+  .skills-items{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .skills-items{
+    grid-template-columns: repeat(1,1fr);
+  }
+  .projects-items{
+    grid-template-columns: repeat(1,1fr);
+  }
+  .heading{
+    font-size: 2.7rem;
+  }
+}
+
+@media (max-width: 450px){
+  html{
+    font-size: 50%;
+  }
+}
